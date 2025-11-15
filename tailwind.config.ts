@@ -65,11 +65,19 @@ export default {
         concert: {
           blue: "hsl(var(--concert-blue))",
         },
+        fun: {
+          orange: "hsl(var(--fun-orange))",
+          yellow: "hsl(var(--fun-yellow))",
+          green: "hsl(var(--fun-green))",
+          blue: "hsl(var(--fun-blue))",
+        },
       },
       backgroundImage: {
         'gradient-love': 'var(--gradient-love)',
         'gradient-energy': 'var(--gradient-energy)',
         'gradient-hero': 'var(--gradient-hero)',
+        'gradient-fun-run': 'var(--gradient-fun-run)',
+        'gradient-rainbow': 'var(--gradient-rainbow)',
       },
       boxShadow: {
         'glow': 'var(--shadow-glow)',
