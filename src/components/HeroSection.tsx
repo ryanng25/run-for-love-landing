@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Heart, Music, Users } from "lucide-react";
+import { Heart, Music, Users, Footprints, Sparkles, Star } from "lucide-react";
 import heroBanner from "@/assets/hero-banner.png";
 
 const HeroSection = () => {
@@ -15,12 +15,15 @@ const HeroSection = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/40 to-background/90" />
       </div>
 
-      {/* Floating Hearts Animation */}
+      {/* Floating Fun Elements Animation */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         <Heart className="absolute top-20 left-10 text-primary/20 w-12 h-12 animate-float" style={{ animationDelay: "0s" }} />
-        <Heart className="absolute top-40 right-20 text-accent/20 w-16 h-16 animate-float" style={{ animationDelay: "1s" }} />
-        <Heart className="absolute bottom-40 left-1/4 text-secondary/20 w-10 h-10 animate-float" style={{ animationDelay: "2s" }} />
-        <Heart className="absolute bottom-20 right-1/3 text-primary/20 w-14 h-14 animate-float" style={{ animationDelay: "1.5s" }} />
+        <Footprints className="absolute top-32 right-16 text-fun-orange/30 w-14 h-14 animate-float" style={{ animationDelay: "0.5s" }} />
+        <Star className="absolute top-40 right-20 text-fun-yellow/30 w-12 h-12 animate-float" style={{ animationDelay: "1s" }} />
+        <Sparkles className="absolute bottom-40 left-1/4 text-fun-green/30 w-10 h-10 animate-float" style={{ animationDelay: "2s" }} />
+        <Heart className="absolute bottom-32 left-20 text-fun-blue/20 w-12 h-12 animate-float" style={{ animationDelay: "1.2s" }} />
+        <Footprints className="absolute bottom-20 right-1/3 text-primary/20 w-14 h-14 animate-float" style={{ animationDelay: "1.5s" }} />
+        <Star className="absolute top-1/2 right-10 text-fun-orange/20 w-10 h-10 animate-float" style={{ animationDelay: "2.5s" }} />
       </div>
 
       {/* Content */}
@@ -43,17 +46,21 @@ const HeroSection = () => {
 
           {/* Features */}
           <div className="flex flex-wrap justify-center gap-6 py-8">
-            <div className="flex items-center gap-2 px-6 py-3 bg-card rounded-full shadow-card">
-              <Users className="w-5 h-5 text-primary" />
-              <span className="font-semibold">Fun Run</span>
+            <div className="flex items-center gap-2 px-6 py-3 bg-card rounded-full shadow-card border-2 border-fun-orange/20">
+              <Footprints className="w-5 h-5 text-fun-orange" />
+              <span className="font-semibold">5K Fun Run</span>
             </div>
-            <div className="flex items-center gap-2 px-6 py-3 bg-card rounded-full shadow-card">
+            <div className="flex items-center gap-2 px-6 py-3 bg-card rounded-full shadow-card border-2 border-fun-yellow/20">
               <Music className="w-5 h-5 text-secondary" />
               <span className="font-semibold">Live Concert</span>
             </div>
-            <div className="flex items-center gap-2 px-6 py-3 bg-card rounded-full shadow-card">
-              <Heart className="w-5 h-5 text-accent animate-heart-beat" />
-              <span className="font-semibold">Love & Music</span>
+            <div className="flex items-center gap-2 px-6 py-3 bg-card rounded-full shadow-card border-2 border-fun-green/20">
+              <Star className="w-5 h-5 text-fun-green" />
+              <span className="font-semibold">Prizes & Fun</span>
+            </div>
+            <div className="flex items-center gap-2 px-6 py-3 bg-card rounded-full shadow-card border-2 border-primary/20">
+              <Heart className="w-5 h-5 text-primary animate-heart-beat" />
+              <span className="font-semibold">Spread Love</span>
             </div>
           </div>
 
@@ -74,8 +81,10 @@ const HeroSection = () => {
 
           {/* Subtitle */}
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto pt-4">
-            Join us for an unforgettable day of running, music, and spreading love. 
-            Experience the perfect blend of fitness and entertainment!
+            <span className="font-bold text-fun-orange">Run.</span>{" "}
+            <span className="font-bold text-fun-yellow">Dance.</span>{" "}
+            <span className="font-bold text-fun-green">Celebrate.</span>{" "}
+            Join us for an unforgettable day of colorful running, amazing music, and spreading love!
           </p>
         </div>
       </div>

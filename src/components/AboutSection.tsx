@@ -1,31 +1,35 @@
 import { Card } from "@/components/ui/card";
-import { Heart, Music, Users, Trophy } from "lucide-react";
+import { Heart, Music, Users, Trophy, Footprints, Sparkles } from "lucide-react";
 
 const AboutSection = () => {
   const features = [
     {
-      icon: Users,
-      title: "Fun Run",
-      description: "Join hundreds of runners in a vibrant, love-themed race through the city. Perfect for all fitness levels!",
-      color: "text-primary",
+      icon: Footprints,
+      title: "5K Fun Run",
+      description: "A colorful, energetic 5K through the city! Walk, jog, or run - all fitness levels welcome. Wear your brightest colors!",
+      color: "text-fun-orange",
+      gradient: "from-fun-orange to-fun-yellow",
     },
     {
       icon: Music,
       title: "Live Concert",
       description: "Dance the night away with incredible live performances from top artists. Music, energy, and love!",
       color: "text-secondary",
+      gradient: "from-secondary to-love-purple",
     },
     {
-      icon: Heart,
-      title: "Celebrate Love",
-      description: "More than just an event - it's a celebration of love, community, and coming together.",
-      color: "text-accent",
+      icon: Sparkles,
+      title: "Color & Energy",
+      description: "Get ready for colorful surprises, photo moments, and an atmosphere full of joy and excitement!",
+      color: "text-fun-green",
+      gradient: "from-fun-green to-fun-blue",
     },
     {
       icon: Trophy,
-      title: "Win Prizes",
-      description: "Compete for amazing prizes, enjoy giveaways, and take home unforgettable memories.",
-      color: "text-concert-blue",
+      title: "Prizes & Fun",
+      description: "Compete for amazing prizes, enjoy giveaways, and create unforgettable memories with friends and family.",
+      color: "text-fun-yellow",
+      gradient: "from-fun-yellow to-fun-orange",
     },
   ];
 
@@ -46,11 +50,12 @@ const AboutSection = () => {
           {features.map((feature, index) => (
             <Card 
               key={index}
-              className="p-8 hover:shadow-glow transition-all duration-300 hover:-translate-y-2 bg-card border-border/50"
+              className="p-8 hover:shadow-glow transition-all duration-300 hover:-translate-y-2 bg-card border-border/50 relative overflow-hidden group"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="space-y-4">
-                <div className={`w-16 h-16 rounded-2xl bg-gradient-love flex items-center justify-center ${feature.color}`}>
+              <div className={`absolute inset-0 bg-gradient-to-br ${feature.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-300`} />
+              <div className="space-y-4 relative z-10">
+                <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${feature.gradient} flex items-center justify-center shadow-lg`}>
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold">{feature.title}</h3>
